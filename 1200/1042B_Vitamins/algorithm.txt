@@ -1,0 +1,32 @@
+Even though the combinations are several, but the set of
+outcomes are few( i.e. 7).
+
+Let's denote the juice in its binary representation
+(eg A => 0th index, B => 1st index, C => 2nd index)
+
+eg
+AB => 011
+A => 001
+C => 100
+
+Now, the number of possible outcomes by combining the values is 7,
+i.e. from 001 to 111
+
+Let's have the empty vitamin case as 000
+
+Array a = [0 M M M M M M M]
+           0 1 2 3 4 5 6 7
+
+For every number, loop through 0 to 8 and do |index|
+
+if a[bin | index] != M
+then
+	a[bin | index] = min(a[bin | index], a[index] + cost)
+end if
+end loop
+
+When index = 0, the if condition will evaluate for single juice
+When index > 0, the if condition will check for the
+min(element at OR of two indices, sum (a[index] + cost of current element))
+
+
