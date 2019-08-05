@@ -1,0 +1,31 @@
+4
+7
+
+44
+47
+74
+77
+
+444
+447
+474
+477
+744
+747
+774
+777
+....
+
+
+1) Find the index of the number in a particular group using bin to decimal kind of algorithm
+2) Add count of groups smaller than the current group
+
+eg
+str = 477
+group_length = 3
+group_index = 4
+Count_of_groups_leq_current_group = 2 ^(group_size) - 2 (Using GP)
+				  = 2 ^ (3) - 2
+				  = 6
+Ans = Count_of_groups_leq_current_group + group_index
+    = 6 + 4 = 10
